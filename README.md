@@ -67,6 +67,6 @@ This project was built as a solution to the Frontend Mentor Age Calculator chall
 
 ## Author
 
-**Ariawhenu Joseph**
+**Okwudili Chukwukwadom Favour**
 
-GitHub: https://github.com/josephariawhenu
+GitHub: https://github.com/chikky-devs
