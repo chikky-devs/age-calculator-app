@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --black: hsl(0, 0%, 0%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--off-white);
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.calculator {
+  background: var(--white);
+
+  width: 100%;
+  max-width: 850px;
+
+  padding: 2rem;
+
+  border-radius: 20px 20px 180px 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM */
+
+#ageForm {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: var(--smokey-grey);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 130px;
+
+  padding: 0.8rem;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  border: 1px solid var(--light-grey);
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: var(--purple);
+}
+
+.input-group small {
+  color: var(--red);
+
+  margin-top: 0.5rem;
+
+  font-size: 0.75rem;
+
+  font-style: italic;
+
+  min-height: 18px;
+}
+
+/* Divider */
+
+.divider {
+  position: relative;
+
+  margin: 2rem 0;
+}
+
+.divider hr {
+  border: none;
+
+  border-top: 1px solid var(--light-grey);
+}
+
+#calculateButton {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 80px;
+  height: 80px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: var(--purple);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#calculateButton:hover {
+  background: var(--black);
+}
+
+#calculateButton img {
+  width: 35px;
+}
+
+/* Results */
+
+.results p {
+  font-size: 5rem;
+
+  font-weight: 800;
+
+  font-style: italic;
+
+  line-height: 1.1;
+}
+
+.results span {
+  color: var(--purple);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .calculator {
+    padding: 1.5rem;
+
+    border-radius: 20px 20px 120px 20px;
+  }
+
+  #ageForm {
+    gap: 1rem;
+
+    justify-content: space-between;
+  }
+
+  .input-group input {
+    width: 90px;
+
+    font-size: 1.4rem;
+  }
+
+  .divider {
+    margin: 4rem 0;
+  }
+
+  #calculateButton {
+    left: 50%;
+
+    right: auto;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .results p {
+    font-size: 3rem;
+  }
+}

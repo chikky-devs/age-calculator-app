@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Age Calculator App</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <form id="ageForm">
+        <div class="input-group">
+          <label for="day">DAY</label>
+          <input type="number" id="day" placeholder="DD" min="1" max="31" />
+          <small id="text-error"></small>
+        </div>
+
+        <div class="input-group">
+          <label for="month">MONTH</label>
+          <input type="number" id="month" placeholder="MM" min="1" max="12" />
+          <small id="month-error"></small>
+        </div>
+
+        <div class="input-group">
+          <label for="year">YEAR</label>
+          <input type="number" id="year" placeholder="YYYY" />
+          <small id="year-error"></small>
+        </div>
+      </form>
+
+      <div class="divider">
+        <hr />
+
+        <button id="calculateButton" type="button" aria-label="Calculate age">
+          <img src="./assets/images/icon-arrow.svg" alt="Arrow icon" />
+        </button>
+      </div>
+
+      <section class="results">
+        <p>
+          <span id="displayYear">--</span>
+          Years
+        </p>
+
+        <p>
+          <span id="displayMonth">--</span>
+          Months
+        </p>
+
+        <p>
+          <span id="displayDay">--</span>
+          Days
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
